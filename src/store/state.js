@@ -1,7 +1,7 @@
 export default {
-    news: [],
-    ask: [],
-    jobs: [],
-    user: [],
-    item: [],
-}
+	news: [],
+	ask: [],
+	jobs: [],
+	user: {},
+	item: {},
+};
