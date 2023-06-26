@@ -19,12 +19,18 @@ export const router = new VueRouter({
         {
             path: "/news",
             name: "news",
-            component: createListView("NewsView"),
+            // component: createListView("NewsView"),
         },
         {
             path: "/ask",
             name: "ask",
             component: createListView("AskView"),
+            beforeEnter: (to, from) => {
+                // reject the navigation
+                console.log(to);
+                console.log(from);
+                return false;
+            },
         },
         {
             path: "/jobs",

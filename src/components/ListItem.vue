@@ -43,22 +43,10 @@ export default {
     computed: {
         listItems() {
             return this.$store.state.list;
-            // const name = this.$route.name;
-            // // console.log(name);
-            // if (name == "NEWS") {
-            // 	return this.$store.state.news;
-            // } else if (name == "ASK") {
-            // 	return this.$store.state.ask;
-            // } else if (name == "JOBS") {
-            // 	return this.$store.state.jobs;
-            // } else {
-            // 	return false;
-            // }
         },
     },
     created() {
         const name = this.$route.name;
-        // console.log(name);
         this.$store.dispatch(`FETCH_LIST`, name);
     },
 };
